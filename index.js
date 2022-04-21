@@ -1,7 +1,7 @@
 import express from "express"
 import cors from "cors"
 import mongoose from "mongoose"
-import jsonwebtoken from "jsonwebtoken";
+// import jsonwebtoken from "jsonwebtoken";
 
 
 const app = express()
@@ -31,16 +31,9 @@ app.post("/login", (req, res)=> {
         if(user){
 
 
-            const token = jwt.sign(
-
-{
-            name: user.name,
-            email: user.email,
-},
-            )
 
             if(password === user.password ) {
-                res.send({message: "Login Successfull", user: token})
+                res.send({message: "Login Successfull", user: user})
             } else {
                 res.send({ message: "Password didn't match"})
             }
@@ -85,7 +78,7 @@ app.post("/register", (req, res)=> {
 // }
 
 
-createToken();
+// createToken();
 app.listen(9002,() => {
     console.log("BE started at port 9002")
 })
