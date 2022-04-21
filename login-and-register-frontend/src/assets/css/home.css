@@ -1,0 +1,499 @@
+/* First img CSS */
+.first-container {
+  height: 85vh;
+  width: 100%;
+  margin-top: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.over-div {
+  width: 35%;
+  height: 80%;
+  margin-left: 60px;
+  background-color: rgba(211, 211, 211, 0.493);
+  text-align: center;
+}
+
+.over-div h1 {
+  font-size: 3.5rem;
+  margin: 80px 30px 0px 30px;
+  line-height: 75px;
+  word-spacing: 15px;
+}
+.over-div p {
+  font-family: cursive;
+  font-size: 1.5rem;
+}
+
+/* About CSS */
+.about-container {
+  height: fit-content;
+  filter: brightness(120%) opacity(90%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-container > img {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  opacity: 0.35;
+}
+
+.about-item {
+  height: fit-content;
+  width: 65%;
+  padding: 30px 120px;
+  margin: 100px auto;
+  color: rgb(240, 240, 240);
+  text-align: justify;
+  background-color: rgba(51, 0, 102, 0.85);
+}
+.about-item h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/*award image container*/
+.award-second-container {
+  background-color: black;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.award-second-container img{
+ 
+  height: 85vh;
+  width: 100%;
+  margin: auto;
+  
+  
+}
+
+/* Team CSS */
+.team-container {
+  height: fit-content;
+  width: 100%;
+  padding: 50px;
+  color: rgb(240, 240, 240);
+  background-color: rgba(51, 0, 102, 0.85);
+}
+
+.team-container h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.team-container hr {
+  background-color: #ddd;
+  width: 30%;
+  margin-left:35%;
+}
+
+.team-items {
+  display: flex;
+  text-align: center;
+}
+
+.partition {
+  background-color: #ddd;
+  height: 600px;
+  padding: 0.8px;
+  align-self: center;
+}
+
+.team-item {
+  width: 40%;
+  height: fit-content;
+  margin: 10px auto;
+}
+
+.team-item img {
+  height: 200px;
+  margin-top: 50px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px 1px rgb(51, 0, 102);
+}
+
+.team-item h5 {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.team-item h6 {
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.team-item p {
+  margin: 10px auto;
+  padding: 0px 20px;
+  text-align: justify;
+}
+
+/* Links CSS */
+.link-container h1 {
+  display: none;
+  position: relative;
+  color: #ddd;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0px;
+  padding: 30px;
+  background-color: rgba(51, 0, 102, 0.85);
+  text-align: center;
+}
+
+.link-items {
+  min-height: 600px;
+  height: fit-content;
+  display: flex;
+}
+
+.link-item {
+  width: calc(100% / 3);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.link-blank {
+  height: 50%;
+}
+
+.link-desc {
+  height: 50%;
+  color: aliceblue;
+  background-color: rgba(96, 59, 107, 0.26);
+}
+
+.link-desc h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 30px 0px 50px 0px;
+}
+
+.link-desc button {
+  font-size: 1rem;
+  padding: 10px 15px;
+}
+
+/* Store CSS */
+.store-container {
+  height: fit-content;
+  padding: 30px;
+  text-align: center;
+}
+
+.store-container h1 {
+  color: #330066;
+  font-weight: bold;
+}
+.products {
+  display: flex;
+  margin: 10px 20px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.product {
+  min-width: 240px;
+  height: 300px;
+  margin: 10px;
+  text-align: center;
+}
+.product img {
+  height: 80%;
+  width: 100%;
+  border-radius: 8px;
+}
+.product .product-desc {
+  height: 20%;
+  color: #330066;
+  margin: 10px;
+}
+.product-desc h5 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.product-desc h6 {
+  font-size: 0.9rem;
+}
+
+/* Contact CSS */
+.contact-container {
+  background-color: rgb(243, 243, 243);
+}
+
+#contact-part-1 {
+  display: flex;
+}
+
+#contact-part-1 .contact-item {
+  width: 50%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#contact-part-1 .contact-item h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #330066;
+  margin-bottom: 40px;
+}
+#contact-part-1 .contact-item p {
+  padding: 0px 40px;
+  margin: 0;
+}
+
+#contact-item-2 img {
+  width: 100%;
+  height: 100%;
+}
+
+#contact-part-2 {
+  width: 100%;
+  height: 500px;
+}
+
+/* footer CSS */
+footer {
+  text-align: center;
+  background-color: #6c757d;
+  padding: 40px;
+  margin: 20px 0px;
+}
+
+footer p {
+  color: white;
+  font-size: 1.6rem;
+  padding: 0px;
+  line-height: 25px;
+}
+
+/* logo CSS */
+.logo-container {
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+}
+.logo-item {
+  height: fit-content;
+  width: 25%;
+  margin: 40px 10px;
+  padding: 15px 20px;
+  border: 1.6px solid #ddd;
+  border-radius: 10px;
+}
+.logo-item img {
+ 
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+}
+.logo-item .para {
+  margin-top: 40px;
+  height: 150px;
+  text-align: center;
+  display: flex;
+  align-items:baseline ;
+  justify-content: center;
+}
+
+@media (max-width: 650px) {
+  /* First img CSS */
+  .first-container {
+    height: 250px;
+  }
+
+  .over-div {
+    height: 80%;
+    margin-left: 20px;
+  }
+
+  .over-div h1 {
+    font-size: 1.2rem;
+    margin: 40px auto -25px auto;
+    line-height: 30px;
+    font-weight: bold;
+  }
+  .over-div p {
+    font-size: 0.7rem;
+  }
+
+  /* About CSS */
+  .about-container {
+    padding: 20px 0px;
+  }
+
+  .about-item {
+    width: 93%;
+    padding: 20px;
+    margin: 15px auto;
+  }
+
+  .about-item h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+
+  .about-container p {
+    font-size: 0.8rem;
+  }
+
+  /* Team CSS */
+  .team-container {
+    padding: 40px 10px;
+  }
+  .team-container h1 {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+  }
+  .team-container hr {
+    width: 80%;
+  }
+
+  .team-items {
+    flex-direction: column;
+  }
+
+  .partition {
+    display: none;
+  }
+
+  .team-item {
+    width: 100%;
+  }
+
+  .team-item h6 {
+    margin-bottom: 20px;
+  }
+
+  .team-item p {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 7px 20px;
+  }
+
+  .team-item img {
+    height: 180px;
+  }
+
+  /* Links CSS */
+  .link-container h1 {
+    display: block;
+    position: relative;
+    color: #ddd;
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin: 0px;
+    padding: 30px;
+    background-color: rgba(51, 0, 102, 0.85);
+    border-top: 1px solid #ddd;
+  }
+
+  .link-items {
+    margin: 0px;
+    flex-direction: column;
+  }
+
+  .link-item {
+    width: 100%;
+    height: 500px;
+    margin: 0px;
+  }
+
+  .link-desc h2 {
+    font-size: 1.4rem;
+  }
+
+  .link-desc button {
+    font-size: 0.8rem;
+  }
+
+  /* Store CSS */
+  .store-container {
+    padding: 30px 0px;
+  }
+
+  .store-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .product {
+    min-width: 200px;
+    height: 250px;
+    margin: 10px 15px;
+  }
+  .product img {
+    padding-bottom: 10px;
+  }
+
+  .product-desc h5 {
+    font-size: 1rem;
+  }
+  .product-desc h6 {
+    font-size: 0.8rem;
+  }
+
+  /* Contact CSS */
+  #contact-part-1 {
+    flex-direction: column;
+  }
+
+  #contact-part-1 .contact-item {
+    width: 100%;
+  }
+
+  #contact-part-1 .contact-item h2 {
+    font-size: 2.2rem;
+  }
+
+  #contact-part-1 .contact-item p {
+    font-size: 0.8rem;
+  }
+
+  #contact-part-1 #contact-item-2 {
+    display: none;
+  }
+
+  /* footer CSS */
+  footer {
+    padding: 20px;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+
+  /* logo CSS */
+  .logo-container {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .logo-item {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px 20px;
+  }
+
+  .logo-item .para {
+    height: fit-content;
+    margin: 8px;
+  }
+}

@@ -1,0 +1,54 @@
+.main-container {
+  padding: 20px;
+}
+.items-container {
+  padding: 10px;
+  width: fit-content;
+  max-width: 90vw;
+  height: fit-content;
+  display: flex;
+  overflow-x: auto;
+  margin: auto;
+}
+.items-container::-webkit-scrollbar {
+  overflow: hidden;
+}
+
+.item {
+  margin: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.item img {
+  height: 170px;
+}
+
+.item h4 {
+  padding: 5px;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.item h5 {
+  padding: 20px;
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+}
+
+.item h6 {
+  padding: 5px;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.item-desc {
+  background-color: #f4efec;
+  padding: 8px;
+  margin: 0;
+}
+.item-cart {
+  background-color: rgba(51, 0, 102, 0.8);
+  margin: 0;
+  cursor: pointer;
+}

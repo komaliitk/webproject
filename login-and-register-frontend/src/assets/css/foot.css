@@ -1,0 +1,19 @@
+.foot-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.foot-desc {
+  text-align: center;
+}
+
+.links {
+  margin: 6px;
+}
+
+.links a {
+  display: block;
+  margin: 3px;
+}

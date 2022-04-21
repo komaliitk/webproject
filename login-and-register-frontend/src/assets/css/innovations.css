@@ -1,0 +1,130 @@
+.main-container {
+  width: 95%;
+  margin: 20px auto -60px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.innovation-container {
+  width: 50%;
+}
+
+.innovation-items {
+  min-width: 450px;
+  min-height: 430px;
+  height: fit-content;
+  margin: 30px 60px 70px 60px;
+}
+
+.innovation-items img {
+  width: 100%;
+  height: 50%;
+  border-radius: 5px;
+}
+
+.overlapping-div {
+  position: relative;
+  padding: 30px;
+  height: fit-content;
+  width: 80%;
+  top: -40px;
+  left: calc(20% / 2);
+  z-index: 2;
+  background-color: rgba(51, 0, 102, 0.8);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.overlapping-div h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: rgb(240, 240, 240);
+  justify-content: center;
+}
+
+.underline {
+  width: 55%;
+  background-color: rgb(240, 240, 240);
+  height: 2px;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  background-color: #6c757d;
+  padding: 40px;
+  margin: 20px 0px;
+}
+
+footer p {
+  color: white;
+  font-size: 1.6rem;
+  padding: 0px;
+  line-height: 25px;
+}
+
+@media (max-width: 575px) {
+  .main-container {
+    width: 90%;
+    margin: 20px auto 30px auto;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .innovation-container {
+    width: 100%;
+    margin-bottom: -30px;
+  }
+
+  .innovation-items {
+    min-width: 100%;
+    min-height: 0px;
+    margin: 30px 0;
+  }
+
+  .overlapping-div {
+    padding: 20px;
+    width: 90%;
+    left: calc(10% / 2);
+  }
+  .overlapping-div h1 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: normal;
+  }
+
+  footer {
+    padding: 20px;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 575px) {
+  .innovation-items {
+    min-width: 0px;
+    min-height: 0px;
+    margin: 15px 35px;
+  }
+  .overlapping-div {
+    padding: 10px;
+  }
+  .overlapping-div h1 {
+    font-size: 1.3rem;
+    font-weight: normal;
+  }
+  footer {
+    padding: 20px;
+  }
+
+  footer p {
+    font-size: 1.3rem;
+    line-height: 30px;
+  }
+}
