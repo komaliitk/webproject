@@ -25,7 +25,18 @@ const Login = ({ setLoginUser}) => {
         .then(res => {
             alert(res.data.message)
             setLoginUser(res.data.user)
-            history.push("/user")
+
+                if(user.email=="admin"){
+                    history.push("/admin");
+                }
+                else{
+                    history.push("/jobs");
+                }
+                
+               
+           
+                
+           
             
         })
     }

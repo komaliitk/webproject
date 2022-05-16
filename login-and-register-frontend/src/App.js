@@ -7,14 +7,37 @@ import Home from './components/Pages/Home'
 import Services from './components/Pages/Services'
 import Education from './components/Pages/Education'
 import Innovations from './components/Pages/Innovations'
+import Career from "./components/Career";
+import Jobs from './components/Jobs';
+import Ad from './components/Ad';
 
+
+
+
+
+// import "../node_modules/bootstrap/dist/js/bootstrap.bundle"
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
 
-  const [ user, setLoginUser] = useState({})
+  const [ user, setLoginUser] = useState({});
+  const [admin,setAdmin]=useState(false);
+  
+  useEffect(() => {
+    check()
+  }, [])
+  const check = () => {
+    
+    if(user.name=="admin"){
+      setAdmin(true);
+    }else{
+      setAdmin(false);
+    }
+
+}
+
   return (
     <div className="App">
       <Router>
@@ -31,6 +54,7 @@ function App() {
           <Route path ="/user">
           {
               user && user._id ? <Homepage setLoginUser={setLoginUser} /> : <Login setLoginUser={setLoginUser}/>
+              
             }
            
           </Route>
@@ -57,7 +81,18 @@ function App() {
           <Route path="/innovations">
             <Innovations />
           </Route>
+          <Route path="/career">
+            <Career />
+          </Route>
 
+          <Route path="/jobs">
+            <Jobs />
+          </Route>
+
+          <Route path="/admin">
+            <Ad />
+          
+          </Route>
 
 
         </Switch>

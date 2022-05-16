@@ -48,7 +48,7 @@ export default function Home() {
       <div class="about-container">
         <img src={about} alt="About us" />
        
-        <div class="about-item">
+        <div class="about-item" >
           <h1>About Us</h1>
           <p>We believe inventive product design and development is all about people. Those with ideas, those with the
             expertise, and

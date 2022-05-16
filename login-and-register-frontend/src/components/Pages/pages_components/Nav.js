@@ -33,9 +33,14 @@ export default function Nav() {
 						<Link to='/Innovations' className="nav-link js-scroll-trigger ">Innovations</Link>
 					</li>
 					<li className="<%= pageTitle==='login' ? 'nav-item mx-1 active' : 'nav-item mx-1' %>">
+					
+					<Link to='/jobs' className="nav-link js-scroll-trigger ">Careers</Link>
+					</li>
+					<li className="<%= pageTitle==='login' ? 'nav-item mx-1 active' : 'nav-item mx-1' %>">
 					{/* <a className="nav-link js-scroll-trigger" href="/login">Login</a> */}
 					<Link to='/Login' className="nav-link js-scroll-trigger ">Login</Link>
 					</li>
+					
 				</ul>
 
 			</div>
