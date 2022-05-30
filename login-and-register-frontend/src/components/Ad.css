@@ -1,4 +1,4 @@
-h1,
+.check h1,
 p,
 a{
   margin: 0;
@@ -12,13 +12,13 @@ h1 {
   font-weight: 800;
 }
 
-p {
+.check p {
   font-size: 1.1em;
   font-weight: 100;
   letter-spacing: 5px;
 }
 
-.header {
+.check .header {
   width: 100%;
   padding:60px 0;
   text-align: center;
@@ -46,4 +46,81 @@ p {
 td, th {
   border: 1px solid #ddd;
   padding: 8px;
+}
+
+
+
+
+
+/* jobs */
+
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.job-item {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-shadow: 0 0 45px rgb(0 0 0 / 8%);
+  transition: .5s;
+}
+.g-4, .gy-4 {
+  --bs-gutter-y: 1.5rem;
+}
+.btn-square, .btn-sm-square, .btn-lg-square {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  border-radius: 2px;
+}
+.btn-square {
+  width: 38px;
+  height: 38px;
+}
+
+.page_content .btn-primary {
+  color: rgb(246, 245, 245);
+  /* background-color: #00B074;
+  border-color: #00B074; */
+}
+.job-item:hover {
+  border-color: rgba(0, 0, 0, .08);
+  box-shadow: none;
 }

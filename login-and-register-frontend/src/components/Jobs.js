@@ -16,54 +16,54 @@ const Jobs = () => {
   }, [])
   const fetchData = () => {
     fetch(URL)
-        .then((res) =>
-            res.json())
+      .then((res) =>
+        res.json())
 
-        .then((response) => {
-            console.log(response.data);
-            getData(response.data);
-        })
+      .then((response) => {
+        console.log(response.data);
+        getData(response.data);
+      })
 
-}
-// apply
-const history = useHistory()
+  }
+  // apply
+  const history = useHistory()
 
-const [ user, setUser] = useState({
+  const [user, setUser] = useState({
     fullname: "",
-    email:"",
+    email: "",
     message: "",
-    resume:"",
-    
-})
+    resume: "",
 
-const handleChange = e => {
+  })
+
+  const handleChange = e => {
     const { name, value } = e.target
     setUser({
-        ...user,
-        [name]: value
+      ...user,
+      [name]: value
     })
-}
+  }
 
-const apply = () => {
+  const apply = () => {
     const { fullname, email, resume, message } = user
-    if( fullname && email && resume && message){
-        axios.post("http://localhost:9002/apply", user)
-        .then( res => {
-            alert(res.data.message)
-            // history.push("/login")
-            setUser({
-              fullname: "",
-              email:"",
-              resume:"",
-              message: ""
+    if (fullname && email && resume && message) {
+      axios.post("http://localhost:9002/apply", user)
+        .then(res => {
+          alert(res.data.message)
+          // history.push("/login")
+          setUser({
+            fullname: "",
+            email: "",
+            resume: "",
+            message: ""
           })
-          
+
         })
     } else {
-        alert("invalid input")
+      alert("invalid input")
     }
-    
-}
+
+  }
 
 
   return (
@@ -87,89 +87,43 @@ const apply = () => {
       <section className='page_content'>
         <div className='container'>
           <div className='row'>
-            <div className='col-md-9'>
-              <div className='inner_left_box'>
-              {data.map((item, i) => (
-                    // <tr key={i}>
-                    //   <td>{item._id}</td>
-                    //     <td>{item.title}</td>
-                    //     <td>{item.description}</td>
-                    //     <td>{item.lastdate}</td>
-                        
-                    // </tr>
-                 <>
-                     <p key={i}>
 
-                        <a class="btn btn-primary w-100" data-toggle="collapse" href={"#"+item.title.replace(/\s/g,"")}role="button" aria-expanded="false" aria-controls="collapseExample">
-                    {item.title}
+            {
+              data.map((item, key) => {
+                return (
+                  <>
+                    <div class="job-item p-4 mb-4" key={key}>
 
-                  </a>
-                    </p>
-                    <div class="collapse" id={item.title.replace(/\s/g,"")}>
-                  <div class="card card-body">
-                    <h4>Job description</h4>
-                    <p style={{letterSpacing:1}}>
-                        {item.description}
-                    </p>
-                    <h4 className='title-head'>Come and Join Us</h4>
-                    
-                    <div className='form_apply'>
-                    <form>
-                   
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Full Name</label>
-                          <input type="text" class="form-control" id="exampleInputEmail1" name='fullname' value={user.fullname} onChange={ handleChange } aria-describedby="emailHelp" placeholder="Full Name " />
-
+                      <div class="row g-4">
+                        <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                          <img class="flex-shrink-0 img-fluid border rounded" src={require("../assets/img/jobicon.png").default} alt="" style={{ width: 80, height: 80 }} />
+                          <div class="text-start ps-4">
+                            <h5 style={{ textTransform: "capitalize" }} class="mb-3">{item.title}</h5>
+                            <span class="text-truncate me-3 text-capitalize"><i class="fa fa-map-marker-alt text-primary me-2 " ></i>{item.location}</span>
+                            <span class="text-truncate me-3 text-capitalize"><i class="far fa-clock text-primary me-2"></i>{item.job_type}</span>
+                            <span class="text-truncate me-0 text-capitalize"><i class="far fa-money-bill-alt text-primary me-2"></i>Rs.{item.money_range}</span>
+                          </div>
                         </div>
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Email</label>
-                          <input type="text" class="form-control" id="exampleInputEmail1" name='email' value={user.email}onChange={ handleChange }  aria-describedby="emailHelp" placeholder="Enter email" />
-
+                        <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                          <div class="d-flex mb-3">
+                            <a class="btn btn-light btn-square me-3" href=""><i class="far fa-heart text-primary"></i></a>
+                            <a class="btn btn-primary" href="">Apply Now</a>
+                          </div>
+                          <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date Line: {item.lastdate}</small>
                         </div>
-
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Upload Your Resume</label>
-                          <input type="file" class="form-control-file" value={user.resume} name="resume" onChange={ handleChange } id="exampleFormControlFile1" />
-                        </div>
-
-
-                        <div class="form-group">
-                          <label for="exampleFormControlTextarea1"></label>
-                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message" value={user.message}onChange={ handleChange }  placeholder='Give us more details..'></textarea>
-                        </div>
-
-                        
-                        <div className="btn btn-primary" type="submit"  onClick={apply} >Apply</div>
-
-                        </form>   
-
-
+                      </div>
                     </div>
-
-                  </div>
-                </div>
-                 </>
-                    
-                    
-                ))}
-               
-            
-
-                
-               
-               
-              </div>
-
-            </div>
-            <div className='col-md-3'>
-
-
-            </div>
+                  </>
+                )
+              })
+            }
 
 
           </div>
 
         </div>
+
+
       </section>
 
 

@@ -22,6 +22,9 @@ const Job_Schema = new mongoose.Schema({
     title: String,
     description: String,
     lastdate: Date,
+    location:String,
+    job_type:String,
+    money_range:String,
 
 });
 
